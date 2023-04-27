@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'Antipasto Pro Medium';
+    src: url('./src/fonts/antipasto.medium.ttf');
+}
+
+@font-face {
+    font-family: 'Antipasto Pro Light';
+    src: url('./src/fonts/antipasto.light.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', 'sans-serif';
+    justify-content: center;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./src/background.png);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(1px);
+}
+
+.logo {
+    margin-top: 5px ;
+    width: 40vh;
+    position: relative;
+    float: left;
+}
+
+.navbar {
+    position: relative;
+    top: 2vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+    max-height: 7%;
+    height: 7%;
+}
+
+.dropbutton {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-family: 'Antipasto Pro Medium';
+}
+
+.dropbutton {
+    background-color: transparent;
+    color: aliceblue;
+    padding: 16px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-family: 'Antipasto Pro Medium';
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+position: relative;
+display: inline-block;
+float: right;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #1d2d3a;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+z-index: 1;
+right: 0;
+top: 60px; /* set initial position to top of button */
+animation-duration: 0.5s; /* specify animation duration */
+animation-timing-function: ease-in-out; /* specify animation timing function */
+animation-fill-mode: forwards; /* specify animation fill mode */
+}
+
+/* Links inside the dropdown */
+.dropdown-content .content {
+color: aliceblue;
+padding: 12px 16px;
+text-decoration: none;
+font-size: 20px;
+display: block;
+font-family: 'Antipasto Pro Light';
+font-weight: bold;
+background-color: #1d2d3a;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+display: block;
+animation-name: slide-down; /* specify animation name */
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content .content:hover {
+background-color: #2e475d;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbutton {
+background-color: #1d2d3a;
+}
+
+@keyframes slide-down {
+    from { top: 0px; } /* starting position */
+    to { top: 50px; } /* ending position */
+}
+
+.welcome-container {
+    display: flex;
+    position: relative;
+    top: 12.5vh;
+    text-align: end;
+}  
+    
+.welcome {
+    color: aliceblue;
+    font-family: 'Antipasto Pro Light';
+}
+
+@keyframes move {
+    from { left: 2%; bottom: 12.5vh; }
+    to { left: 1.25%; bottom: 11vh; }
+}
+
+@media screen and (max-width: 1050px) {
+    .card-container {
+        flex-wrap: wrap;
+    }
+}
+
+.card-container {
+    position: relative; 
+    top: 75vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    display: inline-flex;
+    width: 32vh;
+    transition: transform .25s ease-out;
+}
+
+#text1 {
+    color: aliceblue;
+}
+
+#text2 {
+    color: #00001a;
+}
+
+#text3 {
+    color: aliceblue;
+}
+
+#text4 {
+    color: #00001a;
+}
+
+.card:hover {
+    transform: scale(1.09);
+    filter: blur(.33px);
+}
+
+.card-content {
+    text-decoration: none;
+    cursor: default;
+}
+
+.image {
+    width: 100%;
+    border-radius: 3vh;
+}
+
+.text {
+    position: relative;
+    width: fit-content;
+    font-size: 200%;
+    max-width: 1px;
+    bottom: 11vh;
+    left: 5%;
+    font-family: 'Antipasto Pro Light';
+    transition: transform .25s ease-out;
+}
+
+
+/* possible colors #2E475D */
